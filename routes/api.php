@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+header('Access-Control-Allow-Origin: http://element.linzhou-china.com');
+header('Access-Control-Allow-Headers: Authorization, Content-Type, Access-Control-Allow-Headers, X-Requested-With');
+header('Access-Control-Allow-Methods: *');
+
 // Auth
 Route::post('auth/login', 'AuthController@login');
 Route::post('auth/register', 'AuthController@register');
