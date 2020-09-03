@@ -41,8 +41,7 @@ class Kernel extends HttpKernel
 
         'api' => [
             'throttle:60,1',
-            'bindings',
-            \Fruitcake\Cors\HandleCors::class,
+            'bindings'
         ],
     ];
 
@@ -63,5 +62,6 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'active_user' => ActiveUser::class,
+        'laravel_cors' => \Fruitcake\Cors\HandleCors::class,
     ];
 }
